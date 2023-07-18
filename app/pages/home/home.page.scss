@@ -1,0 +1,31 @@
+.home-page {
+  ion-content {
+    --background: black;
+    color: white;
+  }
+
+  .system-status {
+    margin: 20px;
+  }
+
+  .summary-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+  }
+
+  .summary-info ion-card {
+    margin: 10px;
+    flex-basis: 250px;
+  }
+
+  .summary-info ion-card-title {
+    margin-right: 10px;
+    font-size: 20px; /* Decreased font size */
+  }
+
+  .recent-incidents {
+    margin: 20px;
+  }
+}

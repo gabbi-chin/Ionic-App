@@ -1,0 +1,43 @@
+.register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+    background-color: black;
+  }
+  
+  .logo-container {
+    margin-bottom: 20px;
+  }
+  
+  .logo-container img {
+    width: 150px;
+    height: auto;
+  }
+  
+  .button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .input-item {
+    margin-bottom: 10px;
+  }
+  
+  .login-link {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .login-link a {
+    color: blue;
+  }
+  
+  .register-button {
+    width: 200px;
+    align-self: center; /* Center the Register button horizontally */
+  }
+  
