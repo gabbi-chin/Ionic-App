@@ -1,0 +1,61 @@
+ion-card-content.sensor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+}
+.sensor-page {
+  --ion-background-color: #000000; /* Black color */
+}
+
+.sensor-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.temperature-icon {
+  color: #ff4500; /* Orange color */
+}
+
+.gas-level-icon {
+  color: #dc143c; /* Crimson color */
+}
+
+.humidity-icon {
+  color: #008080; /* Teal color */
+}
+
+.battery-icon {
+  font-size: 48px;
+  color: #32cd32; /* LimeGreen color */
+  margin-bottom: 10px;
+}
+
+.battery-label {
+  font-weight: bold;
+}
+
+.sensor-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.sensor-label {
+  margin-left: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px; /* Desired font size */
+  width: 180px; /* Desired width */
+  margin-top: 10px; /* Desired margin top */
+}
+
+
+
+.sensor-unit {
+  margin-left: 5px;
+}

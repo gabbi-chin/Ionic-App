@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="register-form">
+    <div class="logo-container">
+      
+      <img src="assets/logo.png" alt="Logo">
+    </div>
+
+    <ion-item fill="outline" shape="round" class="input-item">
+      <ion-label position="floating">Name</ion-label>
+      <ion-input type="text" [(ngModel)]="Name"></ion-input>
+    </ion-item>
+
+    <ion-item fill="outline" shape="round" class="input-item">
+      <ion-label position="floating">Address</ion-label>
+      <ion-input type="text" [(ngModel)]="Address"></ion-input>
+    </ion-item>
+
+    <ion-item fill="outline" shape="round" class="input-item">
+      <ion-label position="floating">Contact</ion-label>
+      <ion-input type="text" [(ngModel)]="Contact"></ion-input>
+    </ion-item>
+
+    <ion-item fill="outline" shape="round" class="input-item">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" [(ngModel)]="Email"></ion-input>
+    </ion-item>
+
+    <ion-item fill="outline" shape="round" class="input-item">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="Password"></ion-input>
+    </ion-item>
+
+    <div class="button-container">
+      <ion-button shape="round" color="medium" expand="block" class="register-button" (click)="register()">Register</ion-button>
+    </div>
+
+    <p class="login-link">Already have an account? <a routerLink="/login">Login</a></p>
+  </div>
+</ion-content>
+

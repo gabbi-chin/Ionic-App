@@ -1,0 +1,72 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <ion-icon name="analytics" color="primary"></ion-icon>
+      Sensors
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="sensor-page">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">
+        <ion-icon name="analytics" color="primary"></ion-icon>
+        Sensors
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ng-container *ngIf="selectedRoom === null; else sensorReadings">
+    <ion-card *ngFor="let room of rooms" (click)="goToRoom(room)">
+      <ion-card-content class="sensor-card">
+        <div class="sensor-item">
+          <ion-icon [name]="room.icon" class="sensor-icon" [style.color]="room.iconColor"></ion-icon>
+          <ion-card-title class="sensor-label">{{ room.room }}</ion-card-title>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ng-container>
+
+  <ng-template #sensorReadings>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ selectedRoom.room }}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item class="sensor-item">
+          <ion-icon name="thermometer" class="sensor-icon temperature-icon" color="primary"></ion-icon>
+          <ion-label class="sensor-label">Current Temperature:</ion-label>
+          <ion-input type="text" [value]="temperature + '°C'" disabled></ion-input>
+        </ion-item>
+
+        <ion-item class="sensor-item">
+          <ion-icon name="flame" class="sensor-icon gas-level-icon" color="danger"></ion-icon>
+          <ion-label class="sensor-label">Current Gas Level:</ion-label>
+          <ion-input type="text" [value]="gasLevel + 'ppm'" disabled></ion-input>
+        </ion-item>
+
+        <ion-item class="sensor-item">
+          <ion-icon name="water" class="sensor-icon humidity-icon" color="secondary"></ion-icon>
+          <ion-label class="sensor-label">Current Humidity:</ion-label>
+          <ion-input type="text" [value]="humidity + '%'" disabled></ion-input>
+        </ion-item>
+
+        <ion-item class="sensor-item">
+          <ion-icon name="battery-full" class="battery-icon" color="success"></ion-icon>
+          <ion-label class="sensor-label battery-label">Battery Level:</ion-label>
+          <ion-label class="sensor-label">100%</ion-label>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </ng-template>
+
+  <ion-button *ngIf="selectedRoom !== null" expand="block" color="secondary" class="back-button" (click)="goBack()">
+    <ion-icon name="arrow-back"></ion-icon>
+    Back to Room List
+  </ion-button>
+</ion-content>
